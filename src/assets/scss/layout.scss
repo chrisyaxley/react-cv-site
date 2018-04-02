@@ -1,0 +1,25 @@
+@import '../../assets/scss/utils/varibles.scss';
+@import '../../assets/scss/utils/functions.scss';
+@import '../../assets/scss/utils/mixins.scss';
+
+* {
+  box-sizing: border-box;
+}
+body, html{
+  background: $darkGrey;
+  font-size: 1.6rem; // 16px
+  height: 100%;
+}
+html {
+  font-size: 62.5%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:global {
+  .site-root{
+    max-width: 900px;
+    margin: auto;
+    background: white;
+  }
+}

@@ -1,0 +1,83 @@
+@import './utils/functions.scss';
+@import './utils/varibles.scss';
+@import './utils/mixins.scss';
+
+:global {
+  body, html {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+  h1 {
+    text-transform: uppercase;
+  }
+  h1, h2, h3, h4, h5, h6{
+  }
+  h1{
+    font-size: em(40);
+    line-height: em(30, 40);
+    margin-bottom: em(15, 40);
+    text-transform: uppercase;
+  }
+  h2, h3, h4, h5, h6{
+    font-size: em(14);
+    line-height: em(30,14);
+    margin-bottom: em(15,40);
+    display: inline-block;
+  }
+  h3{
+    font-size: em(24);
+    border-bottom: em(2, 24) solid $yellow;
+    padding-right: em(50, 24);
+    padding-bottom: em(0, 24)
+  }
+  strong {
+    font-weight:bold;
+  }
+  .sub-title{
+    font-size: em(20);
+    font-weight: bold;
+  }
+  /* Links */
+  a{
+    text-decoration: none;
+    font-weight: bold;
+    line-height: 1.667em;
+    color:$lightGrey;
+  }
+  p{
+    font-size: em(15);
+    margin-bottom: em(40, 15);
+    line-height: em(25, 15);
+    &:last-child{
+      margin-bottom: 0;
+    }
+    &.largeText{
+      margin-bottom: em(40, 20);
+      font-size: 1em;
+      line-height: 1.667em;
+      @include bp($tablet) {
+        font-size: em(20);
+        line-height: 1.5em;
+      }
+    }
+  }
+  .largeText p{
+    margin-bottom: em(40, 20);
+    font-size: 1em;
+    line-height: 1.667em;
+    @include bp($tablet) {
+      font-size: em(20);
+      line-height: 1.5em;
+    }
+  }
+  .veryLargeText p {
+    margin-top: em(40, 20);
+    font-size: em(20);
+    line-height: 1.5em;
+    text-align: center;
+    @include bp($tablet) {
+      margin-top: 0;
+      font-size: em(30);
+      line-height: 1.25em;
+    }
+  }
+}

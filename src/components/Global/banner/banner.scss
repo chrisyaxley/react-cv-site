@@ -1,0 +1,67 @@
+@import '../../../assets/scss/utils/functions.scss';
+@import '../../../assets/scss/utils/varibles.scss';
+@import '../../../assets/scss/utils/mixins.scss';
+
+.bannerWrapper {
+  position:fixed;
+  left:0;
+  right:0;
+  background:$codGray;
+  width:100%;
+  z-index:999;
+  .banner {
+    width:100%;
+    max-width:1260px;
+    margin:0 auto;
+    min-height:94px;
+    padding:30px;
+    @include bp($tablet) {
+      padding:20px 75px;
+    }
+    .textWrapper {
+      float:left;
+    }
+    h3 {
+      font-size:20px;
+      font-weight:bold;
+      float:left;
+      margin:0;
+      line-height:30px;
+    }
+    p {
+      font-size:15px;
+      float:left;
+      clear:both;
+    }
+    .button {
+      text-align:center;
+      margin:20px 0 0 0;
+      @include bp($tablet) {
+        clear:both;
+        float:left;
+        margin:20px 0;
+      }
+      @include bp($small-desktop) {
+        text-align:left;
+        margin: 0;
+        float:right;
+        clear:none;
+      }
+    }
+  }
+}
+:global {
+  .bannerWrapper{
+    &.true {
+      bottom:0;
+    }
+    &.false {
+      bottom:-240px;
+      transition: bottom ease 1s;
+      @include bp($small-desktop) {
+        bottom:-100px;
+        transition: bottom ease 0.75s;
+      }
+    }
+  }
+}

@@ -1,0 +1,39 @@
+@import '../../assets/scss/utils/functions.scss';
+@import '../../assets/scss/utils/varibles.scss';
+@import '../../assets/scss/utils/mixins.scss';
+
+.errorContainer{
+  display: flex;
+  justify-content: space-between;
+  padding-left: em(25, 15);
+  padding-right: em(25, 15);
+  @include bp($large) {
+    flex-direction: row;
+    padding-left: em(35, 15);
+    padding-right: em(35, 15);
+  }
+  span{
+    display: block;
+    font-size: em(300);
+  }
+}
+.errorDetails{
+  max-width: 50%;
+  display: block;
+  width: 100%;
+}
+.errorButton{
+  border:0;
+  background: transparent;
+  font-size: 1em;
+  color:$white;
+  padding:0;
+  margin:0;
+  font-weight:bold;
+  @include transition;
+  line-height: 1.667em;
+  cursor: pointer;
+  &:hover {
+    color:$lightGrey;
+  }
+}

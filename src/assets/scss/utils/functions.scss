@@ -1,0 +1,15 @@
+@function em($size, $base: 16) {
+    @return ($size / $base) + em;
+}
+
+@function rem($size, $base: 16) {
+    @return ($size / $base) + rem;
+}
+
+@function px($value) {
+    @return $value + px;
+}
+
+@function adobeTracking($value) {
+    @return ($value/1000) + em;
+}

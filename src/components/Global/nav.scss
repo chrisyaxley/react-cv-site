@@ -1,0 +1,87 @@
+@import '../../assets/scss/utils/functions.scss';
+@import '../../assets/scss/utils/varibles.scss';
+@import '../../assets/scss/utils/mixins.scss';
+:global{
+  .main_nav{
+    margin-top: em(60);
+    @include bp($tablet) {
+      margin-top: 0;
+    }
+    &.false{
+      display: none;
+      @include bp($tablet) {
+        display: block;
+      }
+    }
+    &.true{
+      display: block;
+      width: 100%;
+      @include bp($tablet) {
+        display: flex;
+        width: auto;
+      }
+    }
+     align-self: flex-end;
+   }
+}
+.nav_list{
+  width: 100%;
+  display: block;
+  @include bp($tablet) {
+    display: flex;
+    width: auto;
+  }
+  margin-bottom: 0;
+  li{
+    display: block;
+    .basketNumber {
+      display: block;
+      position:absolute;
+      color:$black;
+      top:9px;
+      font-size:10px;
+      height:18px;
+      width:22px;
+      text-align:center;
+      font-weight:bold;
+    }
+    @include bp($tablet) {
+      display: inline-block;
+      margin-right: em(50);
+    }
+    &:last-child{
+      @include bp($tablet) {
+        margin-top:-6px;
+        margin-right:0;
+        position:absolute;
+        top: 25px;
+        right: 65px;
+        font-size:0.625em;
+        position:relative;
+        top: auto;
+        right: auto;
+      }
+      a {
+        display:block;
+        margin-bottom:20px;
+        border-bottom:0;
+        @include bp($tablet) {
+          height: 22px;
+          width: 24px;
+        }
+        &.active {
+          border-bottom:0;
+        }
+      }
+    }
+    a{
+      padding-bottom: em(25);
+      display: block;
+      line-height: 1em;
+      font-size:em(20);
+      @include bp($tablet) {
+        font-size:1em;
+      }
+    }
+  }
+}

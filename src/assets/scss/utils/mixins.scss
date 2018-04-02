@@ -1,0 +1,55 @@
+@import './functions.scss';
+
+/* ----------- Retina Screens ----------- */
+@mixin bp($size) {
+  @media screen
+    and (min-width: em($size))
+     {
+      @content;
+    }
+}
+@mixin clearfix {
+  &:after {
+    clear: both;
+    content: "";
+    display: table;
+  }
+}
+
+/* @include transition(all,2s,ease-out); */
+@mixin transition($what: all, $time: 0.2s, $how: ease) {
+    -webkit-transition: $what $time $how;
+    -moz-transition:    $what $time $how;
+    -ms-transition:     $what $time $how;
+    -o-transition:      $what $time $how;
+    transition:         $what $time $how;
+}
+
+// Maintain aspect ratio of an absolutely positioned child element (e.g responsive 16:9 video, images etc)
+@mixin aspectContainer($aspectWidth, $aspectHeight){
+    position:relative;
+    width:100%;
+    height:0;
+
+    padding-top: ($aspectHeight / $aspectWidth) * 100%;
+
+    > * {
+        position:absolute;
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+    }
+}
+
+@mixin placeholder {
+  &::-webkit-input-placeholder { @content }
+  &:-moz-placeholder           { @content }
+  &::-moz-placeholder          { @content }
+  &:-ms-input-placeholder      { @content }
+}
+
+// breakpoints
+$tablet: 768;
+$small-desktop: 1024;
+$container-max-width: 1800;

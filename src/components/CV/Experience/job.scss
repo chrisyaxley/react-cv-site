@@ -1,0 +1,29 @@
+@import '../../../assets/scss/utils/varibles.scss';
+@import '../../../assets/scss/utils/functions.scss';
+@import '../../../assets/scss/utils/mixins.scss';
+
+.job{
+  display: flex;
+  padding-bottom: em(20);
+}
+
+.leftCol{
+  width: percentage(3/10);
+  padding: 0 em(10) 0 0;
+}
+.rightCol{
+  width: percentage(7/10);
+  padding: 0 0 0 em(10);
+  a{
+    padding: 0 em(50) em(7) 0;
+    &:hover {
+      border-bottom: em(2) solid $yellow;
+    }
+  }
+}
+
+.title{
+  font-weight: bold;
+  line-height: em(18,15);
+  margin: em(5,15) 0 em(13,15);
+}

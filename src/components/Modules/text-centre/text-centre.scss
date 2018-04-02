@@ -1,0 +1,17 @@
+@import '../../../assets/scss/utils/functions.scss';
+@import '../../../assets/scss/utils/varibles.scss';
+@import '../../../assets/scss/utils/mixins.scss';
+
+.textCta{
+    margin: em(50) auto;
+    text-align: center;
+    max-width: em(900, 20);
+    padding: 0 em(25);
+    @include bp($large) {
+      padding: 0;
+    }
+    a{
+      display: inline-block;
+      margin-top: em(30);
+    }
+}

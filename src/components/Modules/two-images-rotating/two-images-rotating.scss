@@ -1,0 +1,13 @@
+@import '../../../assets/scss/utils/functions.scss';
+@import '../../../assets/scss/utils/mixins.scss';
+@import '../../../assets/scss/utils/varibles.scss';
+.twoImages{
+  margin: $margin 0;
+  @include bp($large) {
+    display: flex;
+    .imageWrapper {
+      width: percentage(1 / 2);
+      height: 100%;
+    }
+  }
+}

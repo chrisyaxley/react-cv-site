@@ -1,0 +1,21 @@
+:global{
+  svg {
+    display: block;
+    margin: auto;
+  }
+  img {
+    vertical-align: top;
+    width: 100%;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    transition: opacity .6s ease;
+    &.loading {
+      opacity: 0;
+    }
+    &.loaded{
+      opacity: 1;
+    }
+  }
+
+}

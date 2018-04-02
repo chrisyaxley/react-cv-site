@@ -1,0 +1,48 @@
+@import './varibles.scss';
+:global{
+  .intrinsic {
+
+    // Make sure <picture> wrapper is set to block
+    // Max-width is governed by parentNode
+    display: block;
+
+    // Intrinsic Ratio Box
+    position: relative;
+    height: 0;
+    width: 100%;
+    padding-top: 100%; // Default to square
+
+    // Custom Styling
+    background: $black;
+
+    // Add as many ratios as youd like...
+    &.intrinsic--1x1 {
+      padding-top: 100%;
+    }
+    &.intrinsic--2x1 {
+      padding-top: 50%;
+    }
+    &.intrinsic--4x3 {
+      padding-top: 75%;
+    }
+
+    &.intrinsic--16x9 {
+      padding-top: 56.25%;
+    }
+
+    &.intrinsic--263x296 {
+      padding-top: 112.54753%;
+    }
+    &.intrinsic--Screenprint {
+      padding-top: 128.87%
+    }
+    // Force the item to fill the intrinsic box
+    .intrinsic-item{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

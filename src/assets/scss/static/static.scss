@@ -1,0 +1,130 @@
+:global {
+  .noJavascript {
+    .navContainer {
+      padding:0 20px;
+      width:100%;
+      max-width:1260px;
+      margin:0 auto;
+      @media screen and (min-width: 768px) {
+        padding:0 20px;
+      }
+      @media screen and (min-width: 1800px) {
+        padding:0;
+      }
+    }
+    .container {
+      clear:both;
+      margin:5.625em auto 0 auto;
+      padding:80px 20px;
+      @media screen and (min-width: 768px) {
+        padding:5.625em 20px;
+        padding:5.625em 20px;
+      }
+      @media screen and (min-width: 1024px) {
+        padding:5.625em 20px;
+      }
+      @media screen and (min-width: 1800px) {
+        padding:5.625em 0;
+      }
+      .copy, .findUs, .sayHello {
+        margin-bottom:50px;
+      }
+      small {
+        font-size:15px;
+        line-height:1.5em;
+        color:#a1a1a1;
+      }
+      .copy {
+        width:100%;
+        float:left;
+        padding-right:20px;
+        .largeText p {
+          margin:0 20px 1.5em 0;
+          @media screen and (min-width: 768px) {
+            margin:0 0 1.5em 0;
+          }
+        }
+        @media screen and (min-width: 768px) {
+          width:50%;
+          float:left;
+          padding-right:20px;
+        }
+      }
+      .socialWrapper {
+        width:100%;
+        float:right;
+        @media screen and (min-width: 768px) {
+          width:36.5%;
+        }
+        @media screen and (min-width: 1800px) {
+          width:36.5%;
+        }
+      }
+      .findUs {
+        width:100%;
+        float:left;
+        @media screen and (min-width: 768px) {
+          width:100%;
+          float:right;
+        }
+        @media screen and (min-width: 1024px) {
+          width:50%;
+        }
+        address{
+          line-height:1.667em;
+          span {
+            display: inline-block;
+            float:left;
+          }
+        }
+      }
+      .sayHello {
+        width:100%;
+        float:left;
+        @media screen and (min-width: 768px) {
+          width:100%;
+          float:right;
+        }
+        @media screen and (min-width: 1024px) {
+          width:50%;
+        }
+        .socialLinks {
+          margin-top: 1.875em;
+          a {
+            display:block;
+          }
+        }
+      }
+    }
+    .siteHeader {
+      width: 100%;
+      z-index: 999;
+      padding:1.6875em 0 0 0;
+      position:fixed;
+      width:100%;
+      top:0;
+      left:0;
+      right:0;
+      background:#191919;
+      @media screen and (min-width: 1024px) {
+        padding:1.6875em 0 0 0;
+      }
+      @media screen and (min-width: 1800px) {
+        padding:1.6875em 5em 0 5em;
+      }
+      .nav {
+        margin:0 auto;
+        max-width:1260px;
+        .headerLogo {
+          display:block;
+          float:left;
+          padding-bottom:1.5625em;
+          margin-top:10px;
+          svg {
+            display:block;
+          }
+        }
+      }
+    }
+  }
+}
