@@ -48,7 +48,7 @@ var config = {
         target: {
           host: '127.0.0.1',
           protocol: 'http:',
-          port: 8081
+          port: 8080
         },
         changeOrigin: false,
         ignorePath: false,

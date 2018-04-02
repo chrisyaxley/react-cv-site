@@ -10,6 +10,7 @@ var apiRoutes = require('./routes');
 
 var configIndexPath = config.get('indexPath');
 console.log('Index path is: ' + configIndexPath);
+var port = process.env.PORT || 8080;
 
 // enable cors
 app.use(
@@ -57,4 +58,4 @@ app.use((req, res) => {
   res.sendFile(path.join(__dirname + configIndexPath));
 });
 
-app.listen(8081);
+app.listen(port);
