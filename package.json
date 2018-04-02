@@ -5,7 +5,7 @@
   "main": "index.js",
   "repository": "git@bitbucket.org:chrisyaxley/online-cv.git",
   "scripts": {
-    "start": "node server/index.js",
+    "start": "NODE_ENV=production && node server/index.js",
     "dev": "export NODE_ENV=development npm run clean && nodemon server & webpack-dev-server --inline --hot --content-base --history-api-fallback --open",
     "clean": "rm -rf ./public/",
     "build": "npm run clean && ./node_modules/webpack/bin/webpack.js",
