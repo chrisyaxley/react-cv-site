@@ -9,7 +9,8 @@
     "dev": "export NODE_ENV=development npm run clean && nodemon server & webpack-dev-server --inline --hot --content-base --history-api-fallback --open",
     "clean": "rm -rf ./public/",
     "build": "npm run clean && ./node_modules/webpack/bin/webpack.js",
-    "prod": "cross-env NODE_ENV=production webpack"
+    "prod": "cross-env NODE_ENV=production webpack",
+    "heroku-postbuild": "npm install && npm run build"
   },
   "author": "Chris Yaxley",
   "license": "ISC",
