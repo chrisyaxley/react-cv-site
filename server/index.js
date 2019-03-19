@@ -1,16 +1,18 @@
-"use strict";
-var express = require('express');
-var app = express();
-var WebpackDevServer = require('webpack-dev-server');
-var bodyParser = require('body-parser');
+'use strict';
+
+let express = require('express');
+
+let app = express();
+let WebpackDevServer = require('webpack-dev-server');
+let bodyParser = require('body-parser');
 const config = require('config');
 const cors = require('cors');
 const path = require('path');
-var apiRoutes = require('./routes');
+let apiRoutes = require('./routes');
 
-var configIndexPath = config.get('indexPath');
+let configIndexPath = config.get('indexPath');
 console.log('Index path is: ' + configIndexPath);
-var port = process.env.PORT || 8080;
+let port = process.env.PORT || 5001;
 
 // enable cors
 app.use(
