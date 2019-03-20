@@ -1,7 +1,7 @@
 const express = require('express');
 
 const app = express();
-const WebpackDevServer = require('webpack-dev-server');
+const expressStaticGzip = require('express-static-gzip');
 const bodyParser = require('body-parser');
 const config = require('config');
 const cors = require('cors');
@@ -28,6 +28,14 @@ app.use(
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+
+// Initial GZIP reading middlewear
+app.use(
+  '/',
+  expressStaticGzip(path.join(__dirname, '../public'), {
+    indexFromEmptyFile: false
+  })
+);
 
 // Add this back in when we have added GZIP support
 app.get('*.js', (req, res, next) => {
