@@ -14,8 +14,7 @@
   },
   "author": "Chris Yaxley",
   "license": "ISC",
-  "devDependencies": {},
-  "dependencies": {
+  "devDependencies": {
     "@babel/core": "^7.3.4",
     "@babel/plugin-proposal-class-properties": "^7.3.4",
     "@babel/preset-env": "^7.3.4",
@@ -64,6 +63,8 @@
     "webpack-combine-loaders": "^2.0.4",
     "webpack-dev-server": "^3.2.1",
     "webpack-merge": "^4.2.1"
+  },
+  "dependencies": {
     "auth0-js": "^8.9.3",
     "babel-preset-stage-1": "^6.1.18",
     "body-parser": "^1.18.2",
