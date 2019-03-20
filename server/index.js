@@ -29,17 +29,17 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // Add this back in when we have added GZIP support
-// app.get('*.js', function (req, res, next) {
-//   req.url = req.url + '.gz';
-//   res.set('Content-Encoding', 'gzip');
-//   next();
-// });
-// app.get('*.css', function (req, res, next) {
-//   req.url = req.url + '.gz';
-//   res.set('Content-Encoding', 'gzip');
-//   res.set('Content-Type', 'text/css');
-//   next();
-// });
+app.get('*.js', function (req, res, next) {
+  req.url = req.url + '.gz';
+  res.set('Content-Encoding', 'gzip');
+  next();
+});
+app.get('*.css', function (req, res, next) {
+  req.url = req.url + '.gz';
+  res.set('Content-Encoding', 'gzip');
+  res.set('Content-Type', 'text/css');
+  next();
+});
 // allow Content-Type to be specified
 app.use((req, res, next) => {
   res.header('Access-Control-Allow-Origin', '*');
