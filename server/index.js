@@ -1,5 +1,3 @@
-
-
 const express = require('express');
 
 const app = express();
@@ -11,8 +9,8 @@ const path = require('path');
 const apiRoutes = require('./routes');
 
 const configIndexPath = config.get('indexPath');
-console.log('Index path is: ' + configIndexPath);
-let port = process.env.PORT;
+
+const port = process.env.PORT || 8000;
 if (port == null || port == '') {
   port = 8000;
 }
@@ -63,4 +61,7 @@ app.use((req, res) => {
   res.sendFile(path.join(configIndexPath));
 });
 
-app.listen(port);
+app.listen(port, () => {
+  console.log('Index path is: ' + configIndexPath);
+  console.log('App is running on port ' + port);
+});
