@@ -11,7 +11,7 @@ const path = require('path');
 const apiRoutes = require('./routes');
 
 const configIndexPath = config.get('indexPath');
-console.log('Index path is: ' + configIndexPath);
+console.log('Index path is: ' + '/../public/index.html');
 let port = process.env.PORT;
 if (port == null || port == '') {
   port = 8000;
@@ -33,12 +33,12 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // Add this back in when we have added GZIP support
 app.get('*.js', (req, res, next) => {
-  req.url = req.url + '.gz';
+  req.url += '.gz';
   res.set('Content-Encoding', 'gzip');
   next();
 });
 app.get('*.css', (req, res, next) => {
-  req.url = req.url + '.gz';
+  req.url += '.gz';
   res.set('Content-Encoding', 'gzip');
   res.set('Content-Type', 'text/css');
   next();
@@ -60,7 +60,7 @@ app.use(express.static('public'));
 
 // Return the HTML file for all requests
 app.use((req, res) => {
-  res.sendFile(path.join(__dirname + configIndexPath));
+  res.sendFile(path.join(__dirname + '/../public/index.html'));
 });
 
 app.listen(port);
