@@ -90,6 +90,6 @@
     "scroll-to-element": "^2.0.0",
     "throttle-debounce": "^1.0.1",
     "whatwg-fetch": "^2.0.3",
-    "webpack-dev-server": "^3.2.1",
+    "webpack-dev-server": "^3.2.1"
   }
 }
