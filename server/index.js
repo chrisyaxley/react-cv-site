@@ -1,18 +1,21 @@
-'use strict';
 
-let express = require('express');
 
-let app = express();
-let WebpackDevServer = require('webpack-dev-server');
-let bodyParser = require('body-parser');
+const express = require('express');
+
+const app = express();
+const WebpackDevServer = require('webpack-dev-server');
+const bodyParser = require('body-parser');
 const config = require('config');
 const cors = require('cors');
 const path = require('path');
-let apiRoutes = require('./routes');
+const apiRoutes = require('./routes');
 
-let configIndexPath = config.get('indexPath');
+const configIndexPath = config.get('indexPath');
 console.log('Index path is: ' + configIndexPath);
-let port = process.env.PORT || 5001;
+let port = process.env.PORT;
+if (port == null || port == '') {
+  port = 8000;
+}
 
 // enable cors
 app.use(
@@ -29,12 +32,12 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // Add this back in when we have added GZIP support
-app.get('*.js', function (req, res, next) {
+app.get('*.js', (req, res, next) => {
   req.url = req.url + '.gz';
   res.set('Content-Encoding', 'gzip');
   next();
 });
-app.get('*.css', function (req, res, next) {
+app.get('*.css', (req, res, next) => {
   req.url = req.url + '.gz';
   res.set('Content-Encoding', 'gzip');
   res.set('Content-Type', 'text/css');
