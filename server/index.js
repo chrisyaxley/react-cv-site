@@ -33,12 +33,12 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // Add this back in when we have added GZIP support
 app.get('*.js', (req, res, next) => {
-  req.url = req.url + '.gz';
+  req.url += '.gz';
   res.set('Content-Encoding', 'gzip');
   next();
 });
 app.get('*.css', (req, res, next) => {
-  req.url = req.url + '.gz';
+  req.url += '.gz';
   res.set('Content-Encoding', 'gzip');
   res.set('Content-Type', 'text/css');
   next();
