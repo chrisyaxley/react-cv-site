@@ -11,7 +11,6 @@ class Job extends Component {
 
   render() {
     const { fields } = this.props;
-    console.log(fields);
     return (
       <div className={styles.job}>
         <div className={styles.leftCol}>

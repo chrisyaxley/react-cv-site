@@ -3,17 +3,25 @@
 @import '../../../assets/scss/utils/mixins.scss';
 
 .cvHeader{
-  padding: em(40);
+  padding: em(40) em(40) em(30);
   background: $lightGrey;
   color: $white;
   text-align: center;
 }
+.name{
+  margin-bottom: em(10, 40);
+}
 .contactBar{
+  a{
+    color: inherit;
+    font-weight: normal;
+  }
 }
 .role,
 .location{
   font-size: 16px;
   display: inline-block;
+  margin-bottom: 0;
 }
 .pipe{
   padding: 0 em(10);
