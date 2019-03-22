@@ -23,7 +23,7 @@ class Job extends Component {
             {' '}
             {
               fields.employedTo
-                ? moment().format('MMM YYYY')
+                ? moment(fields.employedTo).format('MMM YYYY')
                 : 'present'
             }
             {}
