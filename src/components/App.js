@@ -7,7 +7,6 @@ import NoMatch from './404';
 import CV from './CV';
 
 class App extends Component {
-
   render() {
     const meta = {
       title: 'Chris Yaxley - A CV',
@@ -26,17 +25,17 @@ class App extends Component {
           <main>
             <Switch>
               <Route
-                exact path="/"
-                render={() =>
-                  <CV />
+                exact
+                path="/"
+                render={() => <CV />
                 }
               />
               <Route
-                render={props =>
+                render={props => (
                   <NoMatch
                     {...props}
                   />
-                }
+                )}
               />
             </Switch>
           </main>

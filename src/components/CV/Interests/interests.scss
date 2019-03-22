@@ -1,0 +1,31 @@
+@import '../../../assets/scss/utils/varibles.scss';
+@import '../../../assets/scss/utils/functions.scss';
+@import '../../../assets/scss/utils/mixins.scss';
+
+.interests{
+  padding: 0 em(20);
+  margin: em(20) 0;
+  width:100%;
+}
+.interestsList{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.interest{
+  flex: 0 1 33.33333%;
+  margin-bottom: em(20);
+  text-align: center;
+  @include bp($tablet){
+    flex: 0 1 16.6666%;
+  }
+}
+
+.interestIcon{
+  width: em(50);
+  margin-bottom: em(20);
+}
+.interestName{
+  line-height: 1em;
+}

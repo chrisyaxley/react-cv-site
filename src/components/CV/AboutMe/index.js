@@ -1,5 +1,6 @@
 /* global document fetch */
 import React, { Component } from 'react';
+import styles from './aboutMe.scss';
 
 class AboutMe extends Component {
   constructor(props) {
@@ -8,9 +9,11 @@ class AboutMe extends Component {
       aboutMe: {}
     };
   }
+
   componentDidMount() {
     this.getAboutMe();
   }
+
   getAboutMe() {
     const query = '/api/aboutMe/';
     return fetch(query).then(response => response.json()).then((json) => {
@@ -19,14 +22,14 @@ class AboutMe extends Component {
       });
     });
   }
+
   render() {
     const { aboutMe } = this.state;
-    console.log(aboutMe.text);
     return (
-      <div>
-        <h3>About me</h3>
+      <section className={styles.aboutMe}>
+        <h3 className="sectionHeader">About me</h3>
         <p>{aboutMe.text}</p>
-      </div>
+      </section>
     );
   }
 }

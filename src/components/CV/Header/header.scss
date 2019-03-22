@@ -7,20 +7,21 @@
   background: $lightGrey;
   color: $white;
   text-align: center;
-  h2{
-    text-transform: uppercase;
-  }
 }
 .contactBar{
-    a{
-      color: $white;
-      &:hover{
-
-      }
-    }
 }
-
+.role,
+.location{
+  font-size: 16px;
+  display: inline-block;
+}
 .pipe{
   padding: 0 em(10);
   color: $yellow;
+}
+
+.email{
+  span{
+    font-size: 10px;
+  }
 }

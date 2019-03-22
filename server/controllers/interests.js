@@ -10,7 +10,7 @@ const client = contentful.createClient({
   accessToken: ACCESS_TOKEN
 });
 
-exports.getAll = function (req, res) {
-  client.getEntries({ content_type: 'skills', order: 'sys.createdAt' })
-    .then(response => res.send(response.items));
+exports.getAllVisible = function (req, res) {
+  client.getEntries({ content_type: 'interests', order: 'sys.createdAt' })
+    .then((response) => res.send(response.items));
 };

@@ -8,10 +8,12 @@ class Skills extends Component {
       skills: []
     };
   }
+
   componentDidMount() {
     console.log('componentDidMount');
     this.getSkills();
   }
+
   getSkills() {
     console.log('json');
     const query = '/api/skills/';
@@ -21,12 +23,13 @@ class Skills extends Component {
       });
     });
   }
+
   render() {
     const { skills } = this.state;
     console.log(skills);
     return (
       <div>
-        <h3>Skills</h3>
+        <h3 className="sectionHeader">Skills</h3>
         <ul>
           {skills.map((skill, key) => <li key={key}>{skill.fields.name}</li>)}
         </ul>

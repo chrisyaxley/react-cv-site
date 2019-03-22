@@ -6,12 +6,26 @@ class Header extends Component {
   render() {
     return (
       <header className={styles.cvHeader}>
-        <h1>Chris Yaxley</h1>
-        <h2>Front-end Developer</h2>
+        <h1 className={styles.name}>Chris Yaxley</h1>
+        <h2 className={styles.role}>Freelance Developer</h2>
+        <span className={styles.pipe}>|</span>
+        <h3 className={styles.location}>London, UK</h3>
         <div className={styles.contactBar}>
-          <a href="mailto:chris.yaxley@gmail.com">chris.yaxley@gmail.com</a>
-          <span className={styles.pipe}>|</span>
-          <a href="tel:07904039897">07904039897</a>
+          <a href="mailto:chris.yaxley+website@gmail.com" className={styles.email}>
+            chris
+            {' '}
+            <span>[dot]</span>
+            {' '}
+            yaxley
+            {' '}
+            <span>[at]</span>
+            {' '}
+            gmail
+            {' '}
+            <span>[dot]</span>
+            {' '}
+            com
+          </a>
         </div>
       </header>
     );

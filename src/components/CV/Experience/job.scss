@@ -4,16 +4,29 @@
 
 .job{
   display: flex;
-  padding-bottom: em(20);
+  flex-direction: column;
+  border-bottom: 1px solid $yellow;
+  @include bp($mobile){
+    flex-direction: row;  
+    border-bottom: 1px;
+  }
+  padding-bottom: em(10);
+  margin-bottom: em(20);
 }
 
 .leftCol{
-  width: percentage(3/10);
+  @include bp($mobile){
+    width: percentage(3/10);
+  }
   padding: 0 em(10) 0 0;
 }
 .rightCol{
-  width: percentage(7/10);
-  padding: 0 0 0 em(10);
+  padding: em(10) 0 0 0;
+  @include bp($mobile){
+    width: percentage(7/10);
+    padding: 0 0 0 em(10);
+  }
+  
   a{
     padding: 0 em(50) em(7) 0;
     &:hover {
@@ -25,5 +38,8 @@
 .title{
   font-weight: bold;
   line-height: em(18,15);
-  margin: em(5,15) 0 em(13,15);
+  margin: em(5,15) 0;
+  @include bp($mobile){
+    margin: em(5,15) 0 em(13,15);
+  }
 }

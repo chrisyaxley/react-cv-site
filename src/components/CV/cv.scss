@@ -1,19 +1,29 @@
 @import '../../assets/scss/utils/functions.scss';
 @import '../../assets/scss/utils/varibles.scss';
+@import '../../assets/scss/utils/mixins.scss';
 
 .cvContent{
-  display: flex;
+  @include bp($tablet){
+    display: flex;
+    flex-wrap: wrap;
+  }
   color: $lightGrey;
 }
 
 .sidebar{
-  width: percentage(3/10);
+  width: 100%;
+  @include bp($tablet){
+    width: percentage(3/10);
+  }
   padding: 0 em(20);
-  margin: em(20) 0;
+  margin: em(20) 0 0;
 }
 .cvMain{
-  width: percentage(7/10);
+  width: 100%;
+  @include bp($tablet){
+    width: percentage(7/10);
+  }
   padding: 0 em(20);
-  margin: em(20) 0;
+  margin: em(20) 0 0;
   border-left: em(1) solid $lightGrey;
 }

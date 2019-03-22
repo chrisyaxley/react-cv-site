@@ -9,6 +9,7 @@ class Experience extends Component {
       positions: []
     };
   }
+
   componentDidMount() {
     this.getPositions();
   }
@@ -25,10 +26,10 @@ class Experience extends Component {
   render() {
     const { positions } = this.state;
     return (
-      <div>
-        <h3>Experience</h3>
+      <section>
+        <h3 className="sectionHeader">Experience</h3>
         {positions.map((position, key) => <Job key={key} fields={position.fields} />)}
-      </div>
+      </section>
     );
   }
 }

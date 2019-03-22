@@ -2,6 +2,7 @@
 import React, { Component } from 'react';
 import Header from './Header';
 import Experience from './Experience';
+import Interests from './Interests';
 import AboutMe from './AboutMe';
 import Skills from './Skills';
 import styles from './cv.scss';
@@ -11,7 +12,7 @@ class CV extends Component {
     return (
       <div>
         <Header />
-        <div className={styles.cvContent}>
+        <main className={styles.cvContent}>
           <div className={styles.sidebar}>
             <AboutMe />
             <Skills />
@@ -19,7 +20,8 @@ class CV extends Component {
           <div className={styles.cvMain}>
             <Experience />
           </div>
-        </div>
+          <Interests />
+        </main>
       </div>
     );
   }
