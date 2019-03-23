@@ -28,7 +28,9 @@
   }
   
   a{
-    padding: 0 em(50) em(7) 0;
+    margin: 0 em(50) em(7) 0;
+    border-bottom: em(2) solid $white;
+    display:inline-block;
     &:hover {
       border-bottom: em(2) solid $yellow;
     }
