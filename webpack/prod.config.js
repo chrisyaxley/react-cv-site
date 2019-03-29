@@ -47,10 +47,6 @@ module.exports = merge(baseConfig, {
         to: 'assets/images'
       },
       {
-        from: './src/assets/svg',
-        to: 'assets/svg'
-      },
-      {
         from: './src/robots.txt',
         to: 'robots.txt'
       },
