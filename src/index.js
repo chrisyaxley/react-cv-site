@@ -14,7 +14,7 @@ import './assets/scss/images.scss';
 import './assets/scss/typography.scss';
 import './assets/scss/static/static.scss';
 
-ReactGA.initialize('');
+ReactGA.initialize('UA-18197954-2');
 ReactGA.pageview(window.location.pathname + window.location.search);
 
 const rootEl = document.querySelector('.site-root');
