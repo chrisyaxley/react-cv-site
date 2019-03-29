@@ -61,6 +61,10 @@ module.exports = merge(baseConfig, {
       {
         from: './src/manifest.json',
         to: 'manifest.json'
+      },
+      {
+        from: './src/googleedb9ba5b92383e5e.html',
+        to: 'googleedb9ba5b92383e5e.html'
       }
     ]),
     new webpack.DefinePlugin({
