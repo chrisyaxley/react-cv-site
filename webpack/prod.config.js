@@ -43,10 +43,6 @@ module.exports = merge(baseConfig, {
     // new ExtractTextPlugin('assets/styles/[name].[hash].css'),
     new CopyWebpackPlugin([
       {
-        from: './src/assets/fonts',
-        to: 'assets/fonts'
-      },
-      {
         from: './src/assets/images',
         to: 'assets/images'
       },
@@ -65,6 +61,10 @@ module.exports = merge(baseConfig, {
       {
         from: './src/googleedb9ba5b92383e5e.html',
         to: 'googleedb9ba5b92383e5e.html'
+      },
+      {
+        from: './src/sitemap.xml',
+        to: 'sitemap.xml'
       }
     ]),
     new webpack.DefinePlugin({
