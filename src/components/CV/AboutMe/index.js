@@ -1,4 +1,3 @@
-/* global document fetch */
 import React, { Component } from 'react';
 import styles from './aboutMe.scss';
 
