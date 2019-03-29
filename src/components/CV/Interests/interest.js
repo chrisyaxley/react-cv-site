@@ -12,7 +12,7 @@ class Interest extends Component {
     const { fields } = this.props;
     return (
       <div className={styles.interest}>
-        <img className={styles.interestIcon} alt={fields.name} src={fields.icon.fields.file.url} alt={fields.icon.fields.file.title} />
+        <img className={styles.interestIcon} alt={fields.name} src={fields.icon.fields.file.url} />
         <p className={styles.interestName}>{fields.name}</p>
       </div>
     );
