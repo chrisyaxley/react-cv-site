@@ -1,0 +1,30 @@
+@import '../../../assets/scss/utils/varibles.scss';
+@import '../../../assets/scss/utils/functions.scss';
+@import '../../../assets/scss/utils/mixins.scss';
+
+.skillsList{
+    display: flex;
+    flex-wrap: wrap;
+    @include bp($tablet){
+        flex-direction: column;
+    }
+}
+
+.skillsItem{
+    margin-right: 1em;
+    &:after{
+        content:'';
+        display: inline-block;
+        border-right: 1px solid $yellow;
+        width: 1em;
+        height: 100%;
+    }
+    &:last-child:after{
+        content: none;
+    }
+    @include bp($tablet){
+        &:after{
+            content:none;
+        }
+    }
+}
