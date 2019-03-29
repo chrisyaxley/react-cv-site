@@ -29,9 +29,9 @@ class Interests extends Component {
     return (
       <section className={styles.interests}>
         <h3 className="sectionHeader">Interests</h3>
-        <ul className={styles.interestsList}>
+        <div className={styles.interestsList}>
           {interests.map((interest, key) => <Interest key={key} fields={interest.fields} />)}
-        </ul>
+        </div>
       </section>
     );
   }

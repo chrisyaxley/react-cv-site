@@ -10,11 +10,9 @@ class Interest extends Component {
 
   render() {
     const { fields } = this.props;
-    console.log(fields);
-
     return (
       <div className={styles.interest}>
-        <img className={styles.interestIcon} src={fields.icon.fields.file.url} alt={fields.icon.fields.file.title} />
+        <img className={styles.interestIcon} alt={fields.name} src={fields.icon.fields.file.url} alt={fields.icon.fields.file.title} />
         <p className={styles.interestName}>{fields.name}</p>
       </div>
     );

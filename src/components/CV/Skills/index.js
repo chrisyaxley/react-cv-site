@@ -11,12 +11,10 @@ class Skills extends Component {
   }
 
   componentDidMount() {
-    console.log('componentDidMount');
     this.getSkills();
   }
 
   getSkills() {
-    console.log('json');
     const query = '/api/skills/';
     return fetch(query).then(response => response.json()).then((json) => {
       this.setState({
@@ -27,7 +25,6 @@ class Skills extends Component {
 
   render() {
     const { skills } = this.state;
-    console.log(skills);
     return (
       <div>
         <h3 className="sectionHeader">Skills</h3>
