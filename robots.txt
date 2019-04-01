@@ -1,5 +1,0 @@
-User-Agent: *
-Disallow: /assets/
-Disallow: /cdn/
-Disallow: /index.php/
-Disallow: /themes/
