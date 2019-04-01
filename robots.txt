@@ -1,5 +1,4 @@
 User-Agent: *
-Disallow: /api
 Disallow: /assets/
 Disallow: /cdn/
 Disallow: /index.php/
