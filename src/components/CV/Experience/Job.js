@@ -2,6 +2,7 @@
 import React, { Component } from 'react';
 import propTypes from 'prop-types';
 import moment from 'moment';
+import MDReactComponent from 'markdown-react-js';
 import styles from './job.scss';
 
 class Job extends Component {
@@ -29,8 +30,8 @@ class Job extends Component {
           </p>
         </div>
         <div className={styles.rightCol}>
-          <h4><a href={fields.employerWebsite}>{fields.employer}</a></h4>
-          <p>{fields.jobDescription}</p>
+          <h4><a className={styles.employerLink} href={fields.employerWebsite}>{fields.employer}</a></h4>
+          <MDReactComponent text={fields.jobDescription} />
         </div>
       </div>
     );

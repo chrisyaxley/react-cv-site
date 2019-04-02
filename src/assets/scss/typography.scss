@@ -45,9 +45,12 @@
   /* Links */
   a{
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 600;
     line-height: 1.667em;
     color:$lightGrey;
+    &:hover{
+      opacity: 0.8;
+    }
   }
   p{
     font-size: em(15);
