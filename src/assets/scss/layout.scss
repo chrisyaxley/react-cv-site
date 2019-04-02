@@ -22,7 +22,16 @@ html {
     margin: auto;
     background: white;
   }
+  .fadeIn{
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    &.loaded{
+      opacity: 1;
+    }
+  }
 }
 section{
   margin-bottom: em(20);
 }
+
+

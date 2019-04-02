@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
-import styles from './aboutMe.scss';
+
 
 class AboutMe extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      aboutMe: {}
+      aboutMe: {},
+      loading: true
     };
   }
 
@@ -17,15 +18,16 @@ class AboutMe extends Component {
     const query = '/api/aboutMe/';
     return fetch(query).then(response => response.json()).then((json) => {
       this.setState({
-        aboutMe: json[0].fields
+        aboutMe: json[0].fields,
+        loading: false
       });
     });
   }
 
   render() {
-    const { aboutMe } = this.state;
+    const { aboutMe, loading } = this.state;
     return (
-      <section className={styles.aboutMe}>
+      <section className={`fadeIn ${loading ? 'loading' : 'loaded'}`}>
         <h3 className="sectionHeader">About me</h3>
         <p>{aboutMe.text}</p>
       </section>

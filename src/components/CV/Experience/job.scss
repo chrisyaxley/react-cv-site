@@ -1,7 +1,6 @@
 @import '../../../assets/scss/utils/varibles.scss';
 @import '../../../assets/scss/utils/functions.scss';
 @import '../../../assets/scss/utils/mixins.scss';
-
 .job{
   display: flex;
   flex-direction: column;
@@ -9,8 +8,9 @@
   @include bp($mobile){
     flex-direction: row;  
     border-bottom: 1px;
+    padding-bottom: em(15);
   }
-  padding-bottom: em(10);
+  padding-bottom: em(20);
   margin-bottom: em(20);
 }
 
@@ -25,10 +25,6 @@
   @include bp($mobile){
     width: percentage(7/10);
     padding: 0 0 0 em(10);
-  }
-  
-  a{
-    
   }
 }
 .employerLink{

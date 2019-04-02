@@ -6,7 +6,8 @@ class Skills extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      skills: []
+      skills: [],
+      loading: true
     };
   }
 
@@ -18,20 +19,21 @@ class Skills extends Component {
     const query = '/api/skills/';
     return fetch(query).then(response => response.json()).then((json) => {
       this.setState({
-        skills: json
+        skills: json,
+        loading: false
       });
     });
   }
 
   render() {
-    const { skills } = this.state;
+    const { skills, loading } = this.state;
     return (
-      <div>
+      <section className={`fadeIn ${loading ? 'loading' : 'loaded'}`}>
         <h3 className="sectionHeader">Skills</h3>
         <ul className={styles.skillsList}>
           {skills.map((skill, key) => <li className={styles.skillsItem} key={key}>{skill.fields.name}</li>)}
         </ul>
-      </div>
+      </section>
     );
   }
 }

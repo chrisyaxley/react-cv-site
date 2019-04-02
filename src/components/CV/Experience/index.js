@@ -1,4 +1,3 @@
-/* global document fetch */
 import React, { Component } from 'react';
 import Job from './Job';
 
@@ -6,7 +5,8 @@ class Experience extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      positions: []
+      positions: [],
+      loading: true
     };
   }
 
@@ -19,14 +19,15 @@ class Experience extends Component {
     return fetch(query).then(response => response.json()).then((json) => {
       this.setState({
         positions: json,
+        loading: false
       });
     });
   }
 
   render() {
-    const { positions } = this.state;
+    const { positions, loading } = this.state;
     return (
-      <section>
+      <section className={`fadeIn ${loading ? 'loading' : 'loaded'}`}>
         <h3 className="sectionHeader">Experience</h3>
         {positions.map((position, key) => <Job key={key} fields={position.fields} />)}
       </section>

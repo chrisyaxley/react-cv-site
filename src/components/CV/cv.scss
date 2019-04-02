@@ -22,8 +22,9 @@
   width: 100%;
   @include bp($tablet){
     width: percentage(7/10);
+    border-left: em(1) solid $lightGrey;
   }
   padding: 0 em(20);
   margin: em(20) 0 0;
-  border-left: em(1) solid $lightGrey;
+  
 }
