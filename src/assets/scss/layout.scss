@@ -6,7 +6,7 @@
   box-sizing: border-box;
 }
 body, html{
-  background: $darkGrey;
+  background: linear-gradient(to right bottom, rgba($darkGrey, 0.25) 50%, rgba($lightGrey, 0.25) 50%);
   font-size: 1.6rem; // 16px
   height: 100%;
 }

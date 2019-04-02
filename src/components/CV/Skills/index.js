@@ -1,4 +1,3 @@
-/* global document fetch */
 import React, { Component } from 'react';
 import styles from './skills.scss';
 
@@ -31,7 +30,7 @@ class Skills extends Component {
       <section className={`fadeIn ${loading ? 'loading' : 'loaded'}`}>
         <h3 className="sectionHeader">Skills</h3>
         <ul className={styles.skillsList}>
-          {skills.map((skill, key) => <li className={styles.skillsItem} key={key}>{skill.fields.name}</li>)}
+          {skills.map(skill => <li className={styles.skillsItem} key={skill.sys.id}>{skill.fields.name}</li>)}
         </ul>
       </section>
     );

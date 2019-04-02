@@ -31,7 +31,7 @@ class Interests extends Component {
       <section className={`${styles.interests} fadeIn ${loading ? 'loading' : 'loaded'}`}>
         <h3 className="sectionHeader">Interests</h3>
         <div className={styles.interestsList}>
-          {interests.map((interest, key) => <Interest key={key} fields={interest.fields} />)}
+          {interests.map(interest => <Interest key={interest.sys.id} fields={interest.fields} />)}
         </div>
       </section>
     );

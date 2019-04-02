@@ -29,7 +29,7 @@ class Experience extends Component {
     return (
       <section className={`fadeIn ${loading ? 'loading' : 'loaded'}`}>
         <h3 className="sectionHeader">Experience</h3>
-        {positions.map((position, key) => <Job key={key} fields={position.fields} />)}
+        {positions.map(position => <Job key={position.sys.id} fields={position.fields} />)}
       </section>
     );
   }
