@@ -1,10 +1,10 @@
-/* global document fetch */
 import React, { Component } from 'react';
 import Header from './Header';
 import Experience from './Experience';
 import Interests from './Interests';
 import AboutMe from './AboutMe';
 import Skills from './Skills';
+import Footer from './Footer/container';
 import styles from './cv.scss';
 
 class CV extends Component {
@@ -21,6 +21,7 @@ class CV extends Component {
             <Experience />
           </div>
           <Interests />
+          <Footer />
         </main>
       </div>
     );

@@ -93,6 +93,7 @@
     "react-router-dom": "^4.2.2",
     "react-svg-inline": "^2.0.0",
     "redux": "^3.0.4",
+    "redux-logger": "^3.0.6",
     "scroll-to-element": "^2.0.0",
     "throttle-debounce": "^1.0.1",
     "whatwg-fetch": "^2.0.3"

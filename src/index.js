@@ -1,9 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-
+import { Provider } from 'react-redux';
 import ReactGA from 'react-ga';
 // import { BrowserRouter } from 'react-router-dom';
 import { AppContainer } from 'react-hot-loader';
+import store from './store';
 import App from './components/App';
 
 // Global CSS Stuff
@@ -22,7 +23,9 @@ const rootEl = document.querySelector('.site-root');
 const render = (Component) => {
   ReactDOM.render(
     <AppContainer>
-      <Component />
+      <Provider store={store}>
+        <Component />
+      </Provider>
     </AppContainer>,
     rootEl
   );
