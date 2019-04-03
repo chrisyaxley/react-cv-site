@@ -3,37 +3,36 @@
 @import '../../assets/scss/utils/mixins.scss';
 
 .errorContainer{
-  display: flex;
   justify-content: space-between;
-  padding-left: em(25, 15);
-  padding-right: em(25, 15);
+  padding: em(20, 15);
+  text-align: center;
   @include bp($large) {
     flex-direction: row;
-    padding-left: em(35, 15);
-    padding-right: em(35, 15);
+    padding: em(35, 15);
   }
   span{
     display: block;
-    font-size: em(300);
+    font-size: em(150);
   }
 }
-.errorDetails{
-  max-width: 50%;
-  display: block;
+
+.clipText{
+  background-image: url('/assets/images/jpgs/timmy_and_me.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: auto;
   width: 100%;
+  max-width: 321px;
+  height: 242px;
 }
-.errorButton{
-  border:0;
-  background: transparent;
-  font-size: 1em;
-  color:$white;
-  padding:0;
-  margin:0;
-  font-weight:bold;
-  @include transition;
-  line-height: 1.667em;
-  cursor: pointer;
-  &:hover {
-    color:$lightGrey;
-  }
+.text{
+  font-size: 150px;
+  color: black;
+  mix-blend-mode: screen;
+  background-color: rgba($yellow, 0.4);
+  text-align: center;
+  margin: 0;
+  border: em(8, 150) solid;
+  height: 100%;
+  line-height: 242px;
 }

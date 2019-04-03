@@ -12,10 +12,15 @@
   h1, h2, h3, h4, h5, h6{
   }
   h1{
-    font-size: em(40);
-    line-height: em(30, 40);
-    margin-bottom: em(15, 40);
+    font-size: 34px;
+    line-height: em(30, 34);
+    margin-bottom: em(15, 34);
     text-transform: uppercase;
+    @include bp($tablet) {
+      font-size: em(40);
+      line-height: em(30, 40);
+      margin-bottom: em(15, 40);
+    }
   }
   h2{
     margin-bottom: em(10, 16);
