@@ -15,9 +15,9 @@ const apiRoutes = require('./routes');
 
 
 // enable ssl redirect
-if (process.env.NODE_ENV === 'production') {
-  app.use(enforce.HTTPS({ trustProtoHeader: true }));
-}
+// if (process.env.NODE_ENV === 'production') {
+//   app.use(enforce.HTTPS({ trustProtoHeader: true }));
+// }
 
 const port = process.env.PORT || 8000;
 if (port == null || port === '') {
