@@ -22,16 +22,12 @@ class Footer extends Component {
     const {
       loading, data,
     } = this.props;
-    console.log(data);
     return (
-      <footer className={`fadeIn ${loading ? 'loading' : 'loaded'}`}>
+      <footer className={`${styles.siteFooter} fadeIn ${loading ? 'loading' : 'loaded'}`}>
         {!loading && data.map(link => (
-          <div key={link.sys.id} className={styles.linkContainer}>
-            <a href={link.fields.link} target="_blank" rel="noopener noreferrer">
-              <img alt={link.fields.name} src={link.fields.icon.fields.file.url} />
-              {link.fields.name}
-            </a>
-          </div>
+          <a href={link.fields.link} key={link.sys.id} target="_blank" rel="noopener noreferrer">
+            <img className={styles.linkIcon} alt={link.fields.name} src={link.fields.icon.fields.file.url} />
+          </a>
         ))}
       </footer>
     );

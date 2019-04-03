@@ -1,6 +1,15 @@
 @import '../../../assets/scss/utils/varibles.scss';
 @import '../../../assets/scss/utils/functions.scss';
 @import '../../../assets/scss/utils/mixins.scss';
-.linkContainer{
-  
+.siteFooter{
+  background-color: $darkGrey;
+  width: 100%;
+  display: flex;
+  padding: em(20);
+  justify-content: flex-end;
+}
+.linkIcon{
+  width: em(20);
+  height: em(20);
+  margin-left: em(20);
 }
