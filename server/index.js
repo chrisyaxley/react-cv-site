@@ -4,16 +4,33 @@ const app = express();
 const expressStaticGzip = require('express-static-gzip');
 const bodyParser = require('body-parser');
 const config = require('config');
+const contentful = require('contentful');
 const cors = require('cors');
 const path = require('path');
-const apiRoutes = require('./routes');
+require('dotenv').config();
+const enforce = require('express-sslify');
 
 const configIndexPath = config.get('indexPath');
+const apiRoutes = require('./routes');
+
+
+// enable ssl redirect
+if (process.env.NODE_ENV === 'production') {
+  app.use(enforce.HTTPS({ trustProtoHeader: true }));
+}
 
 const port = process.env.PORT || 8000;
-if (port == null || port == '') {
+if (port == null || port === '') {
   port = 8000;
 }
+
+const contentfulPromise = (spaceID, accessToken) => new Promise((resolve, reject) => {
+  resolve(contentful.createClient({
+    space: spaceID,
+    accessToken
+  }));
+});
+
 
 // enable cors
 app.use(
@@ -28,6 +45,13 @@ app.use(
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+
+app.use((req, res, next) => {
+  const spaceID = process.env.SPACE_ID;
+  const accessToken = process.env.ACCESS_TOKEN;
+  req.contentful = contentfulPromise(spaceID, accessToken);
+  next();
+});
 
 // Initial GZIP reading middlewear
 app.use(
@@ -60,8 +84,6 @@ app.use((req, res, next) => {
 app.use('/api', apiRoutes);
 
 // Serve static assets
-const publicPath = express.static(path.join(__dirname, '../public'));
-
 app.use(express.static('public'));
 
 // Return the HTML file for all requests
