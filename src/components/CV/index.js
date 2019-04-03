@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Header from './Header';
 import Experience from './Experience';
-import Interests from './Interests';
+import Interests from './Interests/container';
 import AboutMe from './AboutMe';
 import Skills from './Skills/container';
 import Footer from './Footer/container';
