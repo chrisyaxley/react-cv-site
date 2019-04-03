@@ -1,4 +1,3 @@
-/* global document fetch */
 import React, { Component } from 'react';
 import propTypes from 'prop-types';
 import moment from 'moment';

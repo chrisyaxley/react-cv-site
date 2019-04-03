@@ -4,12 +4,21 @@
 .siteFooter{
   background-color: $darkGrey;
   width: 100%;
-  display: flex;
   padding: em(20);
+}
+.socialLinks{
+  display: flex;
   justify-content: flex-end;
+  margin-bottom: em(10);
 }
 .linkIcon{
   width: em(25);
   height: em(25);
   margin-left: em(20);
+}
+.copyright{
+  color: $white;
+  font-size: 12px;
+  width: 100%;
+  text-align: right;
 }
