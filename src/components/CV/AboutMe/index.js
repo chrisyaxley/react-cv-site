@@ -1,35 +1,30 @@
 import React, { Component } from 'react';
-
+import PropTypes from 'prop-types';
 
 class AboutMe extends Component {
+  static propTypes = {
+    data: PropTypes.array,
+    loading: PropTypes.bool.isRequired,
+    getAboutMeData: PropTypes.func.isRequired,
+  };
+
+  static defaultProps = {
+    data: []
+  };
+
   constructor(props) {
     super(props);
-    this.state = {
-      aboutMe: {},
-      loading: true
-    };
-  }
-
-  componentDidMount() {
-    this.getAboutMe();
-  }
-
-  getAboutMe() {
-    const query = '/api/aboutMe/';
-    return fetch(query).then(response => response.json()).then((json) => {
-      this.setState({
-        aboutMe: json[0].fields,
-        loading: false
-      });
-    });
+    props.getAboutMeData();
   }
 
   render() {
-    const { aboutMe, loading } = this.state;
+    const {
+      loading, data,
+    } = this.props;
     return (
       <section className={`fadeIn ${loading ? 'loading' : 'loaded'}`}>
         <h3 className="sectionHeader">About me</h3>
-        <p>{aboutMe.text}</p>
+        {!loading && <p>{data[0].fields.text}</p>}
       </section>
     );
   }

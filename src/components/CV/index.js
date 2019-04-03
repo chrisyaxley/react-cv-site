@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Header from './Header';
 import Experience from './Experience/container';
 import Interests from './Interests/container';
-import AboutMe from './AboutMe';
+import AboutMe from './AboutMe/container';
 import Skills from './Skills/container';
 import Footer from './Footer/container';
 import styles from './cv.scss';
