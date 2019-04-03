@@ -28,10 +28,10 @@ class Footer extends Component {
       <footer className={`${styles.siteFooter} fadeIn ${loading ? 'loading' : 'loaded'}`}>
         <section className={styles.socialLinks}>
           {!loading && data.map(link => (
-          <a href={link.fields.link} key={link.sys.id} target="_blank" rel="noopener noreferrer">
-            <img className={styles.linkIcon} alt={link.fields.name} src={link.fields.icon.fields.file.url} />
-          </a>
-        ))}
+            <a href={link.fields.link} key={link.sys.id} target="_blank" rel="noopener noreferrer">
+              <img className={styles.linkIcon} alt={link.fields.name} src={link.fields.icon.fields.file.url} />
+            </a>
+          ))}
         </section>
         <div className={styles.copyright}>
           <p>{`© 2018-${moment().format('YYYY')} Chris Yaxley`}</p>

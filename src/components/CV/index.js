@@ -3,7 +3,7 @@ import Header from './Header';
 import Experience from './Experience';
 import Interests from './Interests';
 import AboutMe from './AboutMe';
-import Skills from './Skills';
+import Skills from './Skills/container';
 import Footer from './Footer/container';
 import styles from './cv.scss';
 
