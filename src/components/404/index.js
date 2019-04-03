@@ -14,7 +14,7 @@ class noMatch extends Component {
        <Header />
         <div className="container">
           <div className={styles.errorContainer}>
-            <p>Sorry, I couldnt find what you are looking for. I hope you will except this image on me licking Timmy Mallet in 2005 as away of a apology</p>
+            <p>Sorry, I couldnt find what you are looking for. I hope you will except this image of me licking Timmy Mallet in 2005 as away of a apology</p>
             <div className={styles.clipText}>
             <p  className={styles.text}>404</p>
             </div>
