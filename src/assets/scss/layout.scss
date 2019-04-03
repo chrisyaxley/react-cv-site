@@ -6,9 +6,9 @@
   box-sizing: border-box;
 }
 body, html{
-  background: linear-gradient(to right bottom, rgba($darkGrey, 0.25) 50%, rgba($lightGrey, 0.25) 50%);
   font-size: 1.6rem; // 16px
   height: 100%;
+  min-height: 100%;
 }
 html {
   font-size: 62.5%;
@@ -17,6 +17,10 @@ html {
 }
 
 :global {
+  .background-wrapper{
+    background: linear-gradient(to right bottom, rgba($darkGrey, 0.25) 50%, rgba($lightGrey, 0.25) 50%);
+
+  }
   .site-root{
     max-width: 900px;
     margin: auto;
