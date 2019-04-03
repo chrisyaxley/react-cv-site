@@ -1,35 +1,32 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import Job from './Job';
 
 class Experience extends Component {
+  static propTypes = {
+    data: PropTypes.array,
+    loading: PropTypes.bool.isRequired,
+    getExperienceData: PropTypes.func.isRequired,
+  };
+
+  static defaultProps = {
+    data: []
+  };
+
   constructor(props) {
     super(props);
-    this.state = {
-      positions: [],
-      loading: true
-    };
-  }
-
-  componentDidMount() {
-    this.getPositions();
-  }
-
-  getPositions() {
-    const query = '/api/positions/';
-    return fetch(query).then(response => response.json()).then((json) => {
-      this.setState({
-        positions: json,
-        loading: false
-      });
-    });
+    props.getExperienceData();
   }
 
   render() {
-    const { positions, loading } = this.state;
+    const {
+      loading, data,
+    } = this.props;
+
     return (
       <section className={`fadeIn ${loading ? 'loading' : 'loaded'}`}>
         <h3 className="sectionHeader">Experience</h3>
-        {positions.map(position => <Job key={position.sys.id} fields={position.fields} />)}
+        {!loading && data.map(position => <Job key={position.sys.id} fields={position.fields} />)}
       </section>
     );
   }
