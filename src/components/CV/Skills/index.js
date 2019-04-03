@@ -28,7 +28,7 @@ class Skills extends Component {
     const { skills, loading } = this.state;
     return (
       <section className={`fadeIn ${loading ? 'loading' : 'loaded'}`}>
-        <h3 className="sectionHeader">Skills</h3>
+        <h3 className="sectionHeader">Skills / Tech</h3>
         <ul className={styles.skillsList}>
           {skills.map(skill => <li className={styles.skillsItem} key={skill.sys.id}>{skill.fields.name}</li>)}
         </ul>

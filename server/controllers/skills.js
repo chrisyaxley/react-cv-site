@@ -5,7 +5,7 @@ const router = express.Router();
 router.get('/', (req, res) => {
   req.contentful.then((contentful) => {
     contentful
-      .getEntries({ content_type: 'skills', order: 'sys.createdAt', select: 'sys.id,fields' })
+      .getEntries({ content_type: 'skills', order: 'fields.name', select: 'sys.id,fields' })
       .then(response => res.send(response.items))
       .catch(console.error);
   });
