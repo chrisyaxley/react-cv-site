@@ -88,7 +88,7 @@ app.use(express.static('public'));
 
 // Return the HTML file for all requests
 app.use((req, res) => {
-  res.sendFile(path.join(configIndexPath));
+  res.sendFile(path.join(__dirname + configIndexPath));
 });
 
 app.listen(port, () => {
