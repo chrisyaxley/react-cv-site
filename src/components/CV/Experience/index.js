@@ -20,9 +20,10 @@ class Experience extends Component {
 
   dateOrder(a, b) {
     let comparison = 0;
+
     if (a.fields.employedTo < b.fields.employedTo) {
       comparison = 1;
-    } else if (a.fields.employedTo > b.fields.employedTo) {
+    } else if (a.fields.employedTo > b.fields.employedTo || a.fields.employedTo === undefined) {
       comparison = -1;
     }
     return comparison;
@@ -32,7 +33,6 @@ class Experience extends Component {
     const {
       loading, data,
     } = this.props;
-    console.log(data.sort(this.dateOrder));
     return (
       <section className={`fadeIn ${loading ? 'loading' : 'loaded'}`}>
         <h3 className="sectionHeader">Experience</h3>

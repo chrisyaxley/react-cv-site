@@ -12,27 +12,31 @@ class Job extends Component {
   render() {
     const { fields } = this.props;
     return (
-      <div className={styles.job}>
-        <div className={styles.leftCol}>
-          <p className={styles.title}>{fields.jobTitle}</p>
-          <p>
-            {moment(fields.employedFrom).format('MMM YYYY')}
-            {' '}
+      fields.visible
+        ? (
+          <div className={styles.job}>
+            <div className={styles.leftCol}>
+              <p className={styles.title}>{fields.jobTitle}</p>
+              <p>
+                {moment(fields.employedFrom).format('MMM YYYY')}
+                {' '}
             -
-            {' '}
-            {
+                {' '}
+                {
               fields.employedTo
                 ? moment(fields.employedTo).format('MMM YYYY')
                 : 'present'
             }
-            {}
-          </p>
-        </div>
-        <div className={styles.rightCol}>
-          <h4><a className={styles.employerLink} href={fields.employerWebsite}>{fields.employer}</a></h4>
-          <MDReactComponent text={fields.jobDescription} />
-        </div>
-      </div>
+                {}
+              </p>
+            </div>
+            <div className={styles.rightCol}>
+              <h4><a className={styles.employerLink} href={fields.employerWebsite}>{fields.employer}</a></h4>
+              <MDReactComponent text={fields.jobDescription} />
+            </div>
+          </div>
+        )
+        : false
     );
   }
 }
