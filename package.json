@@ -82,7 +82,7 @@
     "json-loader": "^0.5.7",
     "lodash": "^3.10.1",
     "markdown-react-js": "^1.0.2",
-    "moment": "^2.20.1",
+    "moment": "^2.29.2",
     "node-sass": "^4.14.1",
     "nodemon": "^1.14.11",
     "prop-types": "^15.6.0",
